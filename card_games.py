@@ -10,4 +10,15 @@ def concatenate_rounds(rounds_1, rounds_2):
     return rounds_1 + rounds_2
 
 
-print(concatenate_rounds([27, 28, 29], [35, 36]))
+# print(concatenate_rounds([27, 28, 29], [35, 36]))
+
+
+def list_contains_round(rounds, round_number):
+    if round_number in rounds:
+        return True
+    else:
+        return False
+
+
+print(list_contains_round([27, 28, 29, 35, 36], 29))
+print(list_contains_round([27, 28, 29, 35, 36], 30))
