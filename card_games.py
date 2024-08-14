@@ -43,6 +43,21 @@ def approx_average_is_average(hand):
         return False
 
 
-print(approx_average_is_average([1, 2, 3]))
-print(approx_average_is_average([2, 3, 4, 8, 8]))
-print(approx_average_is_average([1, 2, 3, 5, 9]))
+# print(approx_average_is_average([1, 2, 3]))
+# print(approx_average_is_average([2, 3, 4, 8, 8]))
+# print(approx_average_is_average([1, 2, 3, 5, 9]))
+
+
+def average_even_is_average_odd(hand):
+    evens = hand[1::2]
+    odds = hand[::2]
+    average_evens = sum(evens) / len(evens)
+    average_odds = sum(odds) / len(odds)
+    if average_evens == average_odds:
+        return True
+    else:
+        return False
+
+
+print(average_even_is_average_odd([1, 2, 3]))
+print(average_even_is_average_odd([1, 2, 3, 4]))
