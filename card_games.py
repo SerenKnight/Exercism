@@ -59,5 +59,18 @@ def average_even_is_average_odd(hand):
         return False
 
 
-print(average_even_is_average_odd([1, 2, 3]))
-print(average_even_is_average_odd([1, 2, 3, 4]))
+# print(average_even_is_average_odd([1, 2, 3]))
+# print(average_even_is_average_odd([1, 2, 3, 4]))
+
+
+def maybe_double_last(hand):
+    if hand[-1] == 11:
+        hand.pop(-1)
+        hand.append(22)
+    return hand
+
+
+# hand = [5, 9, 11]
+# print(maybe_double_last(hand))
+# hand = [5, 9, 10]
+# print(maybe_double_last(hand))
