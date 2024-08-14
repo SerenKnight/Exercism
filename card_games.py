@@ -20,5 +20,13 @@ def list_contains_round(rounds, round_number):
         return False
 
 
-print(list_contains_round([27, 28, 29, 35, 36], 29))
-print(list_contains_round([27, 28, 29, 35, 36], 30))
+# print(list_contains_round([27, 28, 29, 35, 36], 29))
+# print(list_contains_round([27, 28, 29, 35, 36], 30))
+
+
+def card_average(hand):
+    average = sum(hand) / len(hand)
+    return average
+
+
+print(card_average([5, 6, 7]))
