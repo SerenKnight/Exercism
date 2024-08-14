@@ -29,4 +29,20 @@ def card_average(hand):
     return average
 
 
-print(card_average([5, 6, 7]))
+# print(card_average([5, 6, 7]))
+
+
+def approx_average_is_average(hand):
+    actual_average = sum(hand) / len(hand)
+    first_strategy = (hand[0] + hand[-1]) / 2
+    second_strategy = hand[int(len(hand) / 2)]
+
+    if first_strategy == actual_average or second_strategy == actual_average:
+        return True
+    else:
+        return False
+
+
+print(approx_average_is_average([1, 2, 3]))
+print(approx_average_is_average([2, 3, 4, 8, 8]))
+print(approx_average_is_average([1, 2, 3, 5, 9]))
